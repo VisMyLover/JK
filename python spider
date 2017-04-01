@@ -1,0 +1,17 @@
+import urllib
+import urllib2
+# import ssl
+import requests
+
+
+values={}
+values['username'] = "13034281338"
+values['password'] = "sy123456"
+data  =urllib.urlencode(values)
+url = 'https://www.folksdai.com/loginAndRegiste/login.html'
+#url.get('https://www.folksdai.com/loginAndRegiste/login.html', verify=False)
+
+#request = urllib2.Request(url,data)
+a = requests.get(url, verify=False)
+response  =urllib2.urlopen(url)
+print  response.read()
